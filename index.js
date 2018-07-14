@@ -21,12 +21,12 @@ print('What do you want to say to Grandma!!');
 while (bool) {
   const ip = prompt('');
   if (ip.length === null) { break; }
+  const res = getRandomValue(1930, 1950);
+  if (ip === 'BYE') {
+    count += 1;
+  } else { count = 0; }
+  if (count === 3) { break; }
   if (isUppercase(ip)) {
-    const res = getRandomValue(1930, 1950);
-    if (ip === 'BYE') {
-      count += 1;
-    } else { count = 0; }
-    if (count === 3) { break; }
     print(`NO, NOT SINCE ${res}`);
   } else {
     count = 0;
